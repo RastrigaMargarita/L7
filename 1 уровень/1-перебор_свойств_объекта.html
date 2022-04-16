@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
+        'use strict'
         const products = {
             one: "один",
             two: "два",
             three: "три",
         };
 
-        /* 
+
+        for (const key in products) {
+            if (products.hasOwnProperty.call(products, key)) {
+                const element = products[key];
+                console.log(`key: ${key}, value: ${element}`);
+
+            }
+        }
+        /*
         Задание.
         Используя цикл for in переберите объект products, ведите в консоль
         имя свойства, значение свойства.
@@ -21,4 +32,5 @@
 
     </script>
 </body>
+
 </html>
